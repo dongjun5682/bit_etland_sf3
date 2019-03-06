@@ -1,14 +1,15 @@
 package com.bit_etland.web.service;
 
-import java.util.HashMap;
-
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Component;
+
 import com.bit_etland.web.domain.CustomerDTO;
-import com.bit_etland.web.proxy.PageProxy;
 import com.bit_etland.web.proxy.Proxy;
 
+
+@Component
 public interface CustomerService {
 
 	public void registCustomer(CustomerDTO cus);

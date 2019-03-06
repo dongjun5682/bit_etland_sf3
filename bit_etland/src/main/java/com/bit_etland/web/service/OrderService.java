@@ -2,8 +2,11 @@ package com.bit_etland.web.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.bit_etland.web.domain.OrderDTO;
 
+@Component
 public interface OrderService {
 
 	public void registOrder(OrderDTO or);

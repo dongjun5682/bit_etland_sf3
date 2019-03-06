@@ -2,10 +2,13 @@ package com.bit_etland.web.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
 import com.bit_etland.web.domain.OrderDetailDTO;
 
 
 
+@Component
 public interface OrderDetailService {
 
 	public void registOrderDetail(OrderDetailDTO ord);
