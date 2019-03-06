@@ -11,8 +11,7 @@ public class CategoryServiceImpl implements CategoryService{
 
 	@Override
 	public void registCategory(CategoryDTO cate) {
-		// TODO Auto-generated method stub
-		
+			
 	}
 
 	@Override
