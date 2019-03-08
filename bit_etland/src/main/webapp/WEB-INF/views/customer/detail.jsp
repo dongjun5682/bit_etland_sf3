@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<jsp:include page="../home/top.jsp"/>
+
 <link rel="stylesheet"href="${css}/customer/detail.css" />
 <div class="grid-item" id="nav">
 	<jsp:include page="../employee/nav.jsp"/>
@@ -35,7 +35,7 @@
 <div class="grid-item" id="reomve">
 	<button type="button" class="btn btn-danger" id="detail_remove">회원탈퇴</button>
 </div>
-<jsp:include page="../home/bottom.jsp"/>
+
 <script>
 $('#detail_remove').click(function(){
 	location.assign('${ctx}/customer.do?cmd=cust_remove&dir=home&page=main&customer_Id=${cus.customerId}');

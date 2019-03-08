@@ -8,7 +8,7 @@ import com.bit_etland.web.proxy.Proxy;
 
 @Component
 public interface CustomerMapper {
-
+	
 	public void insertCustomer(CustomerDTO cus);
 	public List<CustomerDTO> selectCustomerList(Proxy pxy);
 	public List<CustomerDTO> selectCustomers(Proxy pxy);

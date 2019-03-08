@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<jsp:include page="../home/top.jsp"/>
+
 <link rel="stylesheet"href="${css}/customer/update.css" />
 <div class="grid-item" id="nav">
 	<jsp:include page="../employee/nav.jsp"/>
@@ -33,7 +32,6 @@
 <div class="grid-item" id="cancel">
 	<button type="button" class="btn btn-danger" id="cancel_btn">취소</button>
 </div>
-<jsp:include page="../home/bottom.jsp"/>
 <script>
 $('#confirm_btn').click(function(){
 	var form = $('#form');

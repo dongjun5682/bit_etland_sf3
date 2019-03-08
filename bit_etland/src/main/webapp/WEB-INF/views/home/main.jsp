@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<jsp:include page="top.jsp"/>
 <link rel="stylesheet" href="${css}/home/main.css" />
     <div class="grid-item" id="left">
     	고객 전용<br /><br />
@@ -20,21 +19,19 @@
     	객체지향<br /><br />
     	<a href="#" id="oop_access" >접속하기</a><br />
     </div>
-     
-<jsp:include page="bottom.jsp"/>  
 <script src="${js}/oop.js"></script>
 <script>
 $('#cust_login').click(function(){
-	location.assign('customer.do?cmd=move&page=signin');
+	location.assign('${ctx}/move/customer/signin');
 });
 $('#cust_join').click(function(){
-	location.assign('customer.do?cmd=move&page=signup');
+	location.assign('${ctx}/move/customer/signup');
 });
 $('#emp_register').click(function(){
-	location.assign('employee.do?cmd=move&page=register');
+	location.assign('${ctx}/move/employee/register');
 });
 $('#emp_access').click(function(){
-	location.assign('employee.do?cmd=move&page=access');
+	location.assign('${ctx}/move/employee/access');
 });
 $('#oop_access').click(function(){
 	/* app.main(); */
