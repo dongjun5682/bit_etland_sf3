@@ -4,7 +4,19 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.bit_etland.web.mapper.CustomerMapper">
   <select id="selectCustomer" resultType="com.bit_etland.web.domain.CustomerDTO">
-    SELECT * FROM CUSTOMERS WHERE CUSTOMER_ID LIKE #{customerId}
+    SELECT 
+    	CUSTOMER_ID customerId,
+		CUSTOMER_NAME customerName,
+		PASSWORD password,
+		SSN ssn,
+		PHOTO photo,
+		PHONE phone,
+		CITY city,
+		ADDRESS address,
+		POSTALCODE postalCode
+    FROM CUSTOMERS 
+    WHERE CUSTOMER_ID LIKE #{customerId}
+    AND PASSWORD LIKE #{password}
   </select>
    <insert 
 	  id="insertCustomer"
@@ -25,8 +37,8 @@
 	  statementType="PREPARED"
 	  timeout="20">
 	  UPDATE CUSTOMERS SET 
-	  PASSWORD = #{password} ADDRESS = #{address} CITY = #{city} 
-	  			POSTALCODE = #{postalCode} PHONE = #{phone} 
+	  PASSWORD = #{password},ADDRESS = #{address},CITY = #{city}, 
+	  			POSTALCODE = #{postalCode}, PHONE = #{phone} 
 	  			WHERE CUSTOMER_ID LIKE #{customerId}
 	</update>
 	<delete

@@ -1,11 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
 <link rel="stylesheet"href="${css}/customer/detail.css" />
-<div class="grid-item" id="nav">
-	<jsp:include page="../employee/nav.jsp"/>
-</div>
 <div class="grid-item" id="side_menu">
  	<form id="file_form">
  		<img id="detail_img" src="${img}/${image.imgName}.${image.imgExtention}"/>	
@@ -18,15 +13,15 @@
 </div>
 <div class="grid-item" id="content">
 <div id="detail_info">
-[${cus.customerName}의 정보] <br /> 
-아이디 : ${cus.customerId} <br />
-이 름  : ${cus.customerName} <br />
-생년월일 : ${cus.ssn} <br />
-성 별 : 남 <br />
-전화번호 : ${cus.phone} <br />
-우편번호 : ${cus.postalCode} <br />
-지번주소 : ${cus.city} <br />
-상세주소 : ${cus.address}<br />
+[${user.customerName}의 정보] <br /> 
+<div id="customerId">아이디 : ${user.customerId}</div>
+<div>이 름  : ${user.customerName}</div>
+<div>생년월일 : ${user.ssn}</div>
+<div>성 별 : 남 </div>
+<div>전화번호 : ${user.phone} </div>
+<div>우편번호 : ${user.postalCode} </div>
+<div>지번주소 : ${user.city}</div>
+<div>상세주소 : ${user.address}</div>
 </div>
 </div>
 <div class="grid-item" id="modify">
@@ -42,7 +37,7 @@ $('#detail_remove').click(function(){
 });
 $('#detail_modify').click(function(){
 	alert('수정버튼 클릭');
-	location.assign('${ctx}/customer.do?cmd=cust_retrieve&page=update&customer_Id=${cus.customerId}');
+	location.assign('${ctx}/move/customer/update');
 });
 $('#file_upload_btn').click(function(){
 	$('#file_form')

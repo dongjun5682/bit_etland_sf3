@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+    
 <link rel="stylesheet"href="${css}/customer/update.css" />
 <div class="grid-item" id="nav">
 	<jsp:include page="../employee/nav.jsp"/>
@@ -11,19 +11,19 @@
 
 <div class="grid-item" id="content">
 <form id="form">
-[${cus.customerName}의 정보] <br /> 
-아이디 : ${cus.customerId} <br />
-이 름  : ${cus.customerName} <br />
-생년월일 : ${cus.ssn} <br />
+[${user.customerName}의 정보] <br /> 
+아이디 : ${user.customerId} <br />
+<input type="hidden" name="customerId" id="customerId" value ="${user.customerId}" />
+이 름  : ${user.customerName} <br />
+<input type="hidden" name="customerName" id="customerName" value ="${user.customerName}" />
+생년월일 : ${user.ssn} <br />
+<input type="hidden" name="ssn" id="ssn" value ="${user.ssn}" />
 성 별 : 남 <br />
-전화번호 : <input type="text" name="phone" placeholder="${cus.phone}" /><br />
-우편번호 : <input type="text" name="postalCode" placeholder="${cus.postalCode} " /><br />
-지번주소 : <input type="text" name="city" placeholder="${cus.city}" /><br />
-상세주소 : <input type="text" name="address" placeholder="${cus.address}" /><br />
-임시번호 : <input type="text" name="password" placeholder="임시 비밀번호" />
-<input type="hidden" name="customer_Id" value ="${cus.customerId}" />
-<input type="hidden" name="cmd" value="cust_update" />
-<input type="hidden" name="page" value="detail" />
+전화번호 : <input type="text" name="phone" id="phone" value="${user.phone}" /><br />
+우편번호 : <input type="text" name="postalCode" id="postalCode" value="${user.postalCode}"/><br />
+지번주소 : <input type="text" name="city" id="city"value="${user.city}" /><br />
+상세주소 : <input type="text" name="address" id="address" value="${user.address}" /><br />
+임시번호 : <input type="text" name="password" id="password" placeholder="임시 비밀번호" />
 </form>
 </div>	
 <div class="grid-item" id="modify">
@@ -34,10 +34,10 @@
 </div>
 <script>
 $('#confirm_btn').click(function(){
-	var form = $('#form');
-	form.attr('action','${ctx}/customer.do');
-	form.attr('method','post');
-	form.submit();
+	$('#form')
+	.attr('method','POST')
+	.attr('action','${ctx}/customer/update')
+	.submit();
 });
 
 $('#cancel_btn').click(function(){

@@ -11,7 +11,6 @@ import com.bit_etland.web.proxy.Proxy;
 
 @Component
 public interface CustomerService {
-
 	public void registCustomer(CustomerDTO cus);
 	public List<CustomerDTO> bringCustomerList(Proxy pxy);
 	public List<CustomerDTO> retrieveCustomers(Proxy pxy);
