@@ -29,7 +29,7 @@ public class CustomerController {
 		cus = customerSerivce.retrieveCustomer(param);
 		if(cus != null)
 		session.addAttribute("user", cus);
-		return (cus != null) ? "public:customer/detail.tiles" : "public:home/main.tiles";
+		return (cus != null) ? "customer:customer/main.tiles" : "public:home/main.tiles";
 	}
 	@RequestMapping(value = "/detail")
 	public String detail(@RequestParam("customerId")String customerID,

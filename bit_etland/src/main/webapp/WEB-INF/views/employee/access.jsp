@@ -1,11 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="${css}/employee/access.css" />
-<div class="grid-item" id="side_menu">
-	<h1><font style="font-size: 25px">사원 접속</font></h1>
-</div>
-<div class="grid-item" id="content">
-<div style="height:40px"></div>	    
+<section>    
 <form class="form-horizontal">
   <div class="form-group">
     <small class="col-sm-2 control-label">Employee_ID</small>
@@ -24,11 +19,8 @@
       <button type="submit" class="btn btn-default">ACCESS</button>
     </div>
   </div>
-      <input type="hidden" name="cmd" value="access" />
-	    <input type="hidden" name="dir" value="customer" />
-	    <input type="hidden" name="page" value="list" />
 </form>
-</div>
+</section>
 <script>
 $('#confirm_btn').click(function(){
 	var empno = $('#empno').val();

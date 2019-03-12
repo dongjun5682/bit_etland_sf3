@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <link rel="stylesheet" href="${css}/customer/signup.css" />
-
 <div class="grid-item" id="side_menu">
  	<h1><font style="font-size: 25px">회원 등록</font></h1>
 </div>

@@ -1,11 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="${css}/employee/access.css" />
-<div class="grid-item" id="side_menu">
-	<h1><font style="font-size: 25px">회원 로그인</font></h1>
-</div>
-<div class="grid-item" id="content">
-<div style="height:40px"></div>	    
+<link rel="stylesheet" href="${css}/customer/signin.css" />
+<section class="login" id="login">
+    <div class="container"> 
+  <h3 class="text-center text-uppercase text-secondary mb-0">Customer Login</h3>
 <form id="form">
   <div class="form-group">
     <small class="col-sm-2 control-label">UserID</small>
@@ -21,11 +19,12 @@
   </div>
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" class="btn btn-default" id="confirm_btn">Sign in</button>
+    <button type="submit" class="btn btn-primary btn-xl" id="confirm_btn">Send</button>
     </div>
   </div>
 </form>
 </div>
+</section>
 <script>
 $('#confirm_btn').click(function(){
 	$('#form')

@@ -1,7 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link rel="stylesheet" href="${css}/home/main.css" />
-    <div class="grid-item" id="left">
+
+<section class="portfolio" id="portfolio">
+    <div class="container">
+      <h2 class="text-center text-uppercase text-secondary mb-0">Login Select</h2>
+      <hr class="star-dark mb-5">
+   		 <div class="grid-item" id="left">
     	고객 전용<br /><br />
     	<a href="#" id="cust_join" >회원가입</a><br />
     	<a href="#" id="cust_login" >로 그 인</a>
@@ -11,15 +15,9 @@
     	<a href="#" id="emp_register" >사원등록</a><br />
     	<a href="#" id="emp_access">접속승인</a>
     </div>
-     <div class="grid-item" id="left">
-    	알고리즘<br /><br />
-    	<a href="#" id="algo_access" >접속하기</a><br />
-    </div>
-      <div class="grid-item" id="right">
-    	객체지향<br /><br />
-    	<a href="#" id="oop_access" >접속하기</a><br />
-    </div>
-<script src="${js}/oop.js"></script>
+      </div>
+  </section>
+ 
 <script>
 $('#cust_login').click(function(){
 	location.assign('${ctx}/move/customer/signin');
