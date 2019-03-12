@@ -22,8 +22,7 @@ public class HomeController {
 	public String home(HttpSession session, HttpServletRequest request) {
 		Logger.info("컨트롤러 진입 ");
 		pxy.setContext();
-		
-		return "public:home/main.tiles";
+		return "index.jsp";
 	}
 	@RequestMapping("/move/{dir}/{page}")
 	public String move(
