@@ -1,10 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<link rel="stylesheet"href="${css}/customer/update.css" />
-<div class="grid-item" id="nav">
-	<jsp:include page="../employee/nav.jsp"/>
-</div>
+
+<div class="grid-container">
 <div class="grid-item" id="side_menu">
  	<img src="${img}/${image.imgName}.${image.imgExtention}"/>
 </div>
@@ -25,12 +22,15 @@
 상세주소 : <input type="text" name="address" id="address" value="${user.address}" /><br />
 임시번호 : <input type="text" name="password" id="password" placeholder="임시 비밀번호" />
 </form>
+</div>
 </div>	
+<div class="grid-container">
 <div class="grid-item" id="modify">
 	<button type="button" class="btn btn-success" id="confirm_btn">확인</button>
 </div>
 <div class="grid-item" id="cancel">
 	<button type="button" class="btn btn-danger" id="cancel_btn">취소</button>
+</div>
 </div>
 <script>
 $('#confirm_btn').click(function(){

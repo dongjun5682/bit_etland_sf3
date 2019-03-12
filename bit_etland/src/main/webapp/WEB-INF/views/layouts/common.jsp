@@ -21,6 +21,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="${css}magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css">
   <link href="${css}home/freelancer.min.css" rel="stylesheet">
+    <link href="${css}customer/detail.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </head>

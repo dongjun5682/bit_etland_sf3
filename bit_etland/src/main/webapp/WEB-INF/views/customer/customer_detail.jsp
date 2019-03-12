@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<link rel="stylesheet"href="${css}/customer/detail.css" />
+<section class="portfolio" id="portfolio">
+<div class="grid-container">
 <div class="grid-item" id="side_menu">
  	<form id="file_form">
  		<img id="detail_img" src="${img}/${image.imgName}.${image.imgExtention}"/>	
@@ -30,7 +31,8 @@
 <div class="grid-item" id="reomve">
 	<button type="button" class="btn btn-danger" id="detail_remove">회원탈퇴</button>
 </div>
-
+</div>
+</section>
 <script>
 $('#detail_remove').click(function(){
 	location.assign('${ctx}/customer.do?cmd=cust_remove&dir=home&page=main&customer_Id=${cus.customerId}');

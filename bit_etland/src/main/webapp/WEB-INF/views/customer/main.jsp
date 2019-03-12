@@ -83,4 +83,9 @@ $('#emp_access').click(function(){
 $('#home_btn').click(function(){
 	location.assign('home.do');
 });
+
+$('#mypage').click(function(){
+	location.assign('${ctx}/move/customer/customer_detail')
+});
+
 </script>

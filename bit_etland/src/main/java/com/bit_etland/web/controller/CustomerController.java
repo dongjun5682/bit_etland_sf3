@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -39,7 +40,7 @@ public class CustomerController {
 		cus.setCustomerId(customerID);
 		cus = customerSerivce.retrieveCustomer(cus);
 		model.addAttribute("cus",cus);
-		return "public:customer/detail.tiles";
+		return "public:customer/customer_detail.tiles";
 	}
 	
 	@RequestMapping(value = "/update", method = RequestMethod.POST)
@@ -50,5 +51,12 @@ public class CustomerController {
 		session.addAttribute("user",cus);
 		red.addAttribute("customerId",param.getCustomerId());
 		return "redirect:/customer/detail";
+	}
+	
+	@RequestMapping("/mypage/{dir}/{page}")
+	public String mypage(
+			@PathVariable String dir,
+			@PathVariable String page){
+		return String.format("customer:%s/%s.tiles",dir,page);
 	}
 }

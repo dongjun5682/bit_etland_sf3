@@ -26,11 +26,9 @@ public class HomeController {
 		return "public:home/main.tiles";
 	}
 	@RequestMapping("/move/{dir}/{page}")
-	public String move(
+	public String moveCust(
 			@PathVariable String dir,
-			@PathVariable String page){
-		Logger.info("move to {dir}",dir +"/"+page);
-		
+			@PathVariable String page){		
 		return String.format("public:%s/%s.tiles",dir,page);
 	}
 }
