@@ -72,6 +72,7 @@
 			</div>
 		</header>
 	</div>
+	
 	<div class="item3" id="main">
 		<section class="login" id="login">
 			<div class="container">
@@ -96,13 +97,13 @@
 	<div class="item5" id="footer">
 		<div class="copyright py-4 text-center text-white">
 			<div class="container">
-				<small>Copyright &copy; Your Website 2019-03-12</small>
+				<small>Copyright &copy; My DongJun 2019-03-12</small>
 			</div>
 		</div>
 	</div>
 </body>
 <script>
-app.context.init('${ctx}')
+app.path.init('${ctx}')
 </script>
 <script src="${js}/jquery.min.js"></script>
 <script src="${js}/bootstrap.bundle.min.js"></script>

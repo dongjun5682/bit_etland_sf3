@@ -29,6 +29,10 @@
 		<commons-el-version>1.0</commons-el-version>
 		<commons-fileupload-version>1.3.1</commons-fileupload-version>
 		<commons-io-version>2.4</commons-io-version>
+		<jackson-version>2.9.0</jackson-version>
+		<jaxb-version>2.1</jaxb-version>
+		<jackson-mapper-version>1.9.13</jackson-mapper-version>
+		<jackson-lib>2.4</jackson-lib>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -227,8 +231,56 @@
 		    <version>${commons-io-version}</version>
 		</dependency>
 		
+		<!-- Jackson -->
+		<dependency>
+	   		 <groupId>com.fasterxml.jackson.core</groupId>
+	   		 <artifactId>jackson-databind</artifactId>
+	    	 <version>${jackson-version}</version>
+		</dependency>
 
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-annotations</artifactId>
+		    <version>${jackson-version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.fasterxml.jackson.core</groupId>
+		    <artifactId>jackson-core</artifactId>
+		    <version>${jackson-version}</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.fasterxml.jackson.module</groupId>
+		    <artifactId>jackson-module-jaxb-annotations</artifactId>
+		    <version>${jackson-version}</version>
+		</dependency>
 		
+		<dependency>
+		    <groupId>com.fasterxml.jackson.jaxrs</groupId>
+		    <artifactId>jackson-jaxrs-json-provider</artifactId>
+		    <version>${jackson-version}</version>
+		</dependency>		
+		
+		<dependency>
+		    <groupId>javax.xml</groupId>
+		    <artifactId>jaxb-impl</artifactId>
+		    <version>${jaxb-version}</version>
+		</dependency>
+			
+		<dependency>
+		    <groupId>org.codehaus.jackson</groupId>
+		    <artifactId>jackson-mapper-asl</artifactId>
+		    <version>${jackson-mapper-version}</version>
+		</dependency>	
+		
+		<dependency>
+		    <groupId>net.sf.json-lib</groupId>
+		    <artifactId>json-lib</artifactId>
+		    <version>${jackson-lib}</version>
+		    <classifier>jdk15</classifier>
+		</dependency>
+			
 		<!-- Test -->
 		<dependency>
 			<groupId>junit</groupId>
