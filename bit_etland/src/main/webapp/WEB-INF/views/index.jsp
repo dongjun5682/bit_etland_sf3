@@ -36,7 +36,6 @@
 <script src="${js}/app.js"></script>
 </head>
 <body>
-	<div class="grid-container"></div>
 	<div class="item1" id="nav">
 		<nav
 			class="navbar navbar-expand-lg bg-secondary fixed-top text-uppercase"

@@ -1,14 +1,21 @@
 var app = app || {};
-app.path = (()=>{
+app=(()=>{
 	var init =x=>{
 		app.session.init(x);
-		alert(app.$.ctx());
 		onCreate();
 	}
 	var onCreate = ()=>{
 		setContentView();
 	}
 	var setContentView =()=>{
+/*		$('#mainNav').empty().text('네비');
+		$('#header').empty().text('헤더');
+		$('#main').empty().text('메인');
+		$('#footer').empty().text('풋터');
+		$('#mainNav').html('<h1>네비</h1>');
+		$('#header').html('<h1>헤더 </h1>');
+		$('#main').html('<h1>메인</h1>');
+		$('#footer').html('<h1>풋터</h1>');*/
 		
 	}
 	return{init : init}
@@ -37,4 +44,3 @@ app.$ = {
 		css : ()=>{return sessionStorage.getItem('css')},
 		img : ()=>{return sessionStorage.getItem('img')}	
 	};
-

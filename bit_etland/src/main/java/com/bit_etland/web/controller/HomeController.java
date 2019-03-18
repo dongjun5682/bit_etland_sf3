@@ -22,7 +22,7 @@ public class HomeController {
 	public String home(HttpSession session, HttpServletRequest request) {
 		Logger.info("컨트롤러 진입 ");
 		pxy.setContext();
-		return "index.jsp";
+		return "algorithm.jsp";
 	}
 	@RequestMapping("/move/{dir}/{page}")
 	public String move(
