@@ -10,6 +10,15 @@ $$ = {
 		 return $('<li id='+x.id+'/>');
 	 },
 	 h : x=>{
-		 return $('<h'+x.num+'>'+x.val+'</h'+x.num+'>');
-	 } 
+		 return $('<h'+x.num+' '+x.id+' />');
+	 },
+	 form : x=>{
+		 return $('<form/>');
+	 },
+	 label : x=>{
+		 return $('<label for='+x.name+'/>');
+	 },
+	 input : x=>{
+		 return $('<input type='+x.type+' id='+x.id+' />');
+	 }
 };
