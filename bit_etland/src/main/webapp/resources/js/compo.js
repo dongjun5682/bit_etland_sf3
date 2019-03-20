@@ -10,10 +10,10 @@ $$ = {
 		 return $('<li id='+x.id+'/>');
 	 },
 	 h : x=>{
-		 return $('<h'+x.num+' '+x.id+' />');
+		 return $('<h'+x.num+' '+x.id+'/>');
 	 },
 	 form : x=>{
-		 return $('<form/>');
+		 return $('<form id='+x.id+'/>');
 	 },
 	 label : x=>{
 		 return $('<label for='+x.name+'/>');
